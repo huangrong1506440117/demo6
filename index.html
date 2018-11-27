@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="爱心，爱心飘落">
+    <meta name="description" content="爱心飘落">
+    <title>爱心飘落</title>
+</head>
+<style>
+    body,html{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        overflow: hidden;
+        margin: 0;
+        background-image: url("images/2.jpg");
+        background-size: cover;
+    }
+    .heart{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+    }
+    .snowfall-flakes:before,.snowfall-flakes:after{
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        width: 10px;
+        height: 15px;
+        background-color: #ff0000;
+        border-radius: 5px 5px 0 0;
+    }
+    .snowfall-flakes:before{
+        transform: rotate(-45deg);
+    }
+    .snowfall-flakes:after{
+        transform: translate(3.6px) rotate(45deg);
+    }
+</style>
+<body>
+    <!-- <div class="heart"></div> -->
+    <script src="js/jquery-1.2.6.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <script>
+        $(document).snowfall({flakeCount : 100,maxSpeed : 10});
+    </script>
+</body>
+</html>
